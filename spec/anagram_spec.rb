@@ -24,5 +24,11 @@ describe 'Anagram' do
       word2 = Anagram.new("snow")
       expect(word1.anagram_of(word2)).to eq "These words are not anagrams"
     end
+
+    it 'returns confirm phrase if alphabetical forms are equal with different cases' do
+      word2 = Anagram.new("Eat")
+      word3 = Anagram.new("Tea")
+      expect(word2.anagram_of(word3)).to eq "These words are anagrams."
+    end
   end
 end
