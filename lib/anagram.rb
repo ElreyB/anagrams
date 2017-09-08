@@ -18,7 +18,8 @@ class Anagram
 
 private
   def alphabetically_sorted
-    word.downcase.split("").sort.join
+    letters = @word.delete(" ")
+    letters.downcase.split("").sort.join
   end
 
 

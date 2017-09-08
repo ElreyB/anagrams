@@ -30,5 +30,11 @@ describe 'Anagram' do
       word3 = Anagram.new("Tea")
       expect(word2.anagram_of(word3)).to eq "These words are anagrams."
     end
+
+    it 'returns confirm phrase if alphabetical forms are equal when a phrase has spaces' do
+      phrase1 = Anagram.new("Clint Eastwood")
+      phrase2 = Anagram.new("Old West Action")
+      expect(phrase1.anagram_of(phrase2)).to eq "These words are anagrams."
+    end
   end
 end
