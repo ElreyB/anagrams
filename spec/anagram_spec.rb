@@ -72,7 +72,7 @@ describe 'Anagram' do
         word1 = Anagram.new("tacocat")
         word2 = Anagram.new("ruby")
         expect(Palindrome.both_palindromes?(word1.word, word2.word)).to eq "These one or both of these words are not palindromes."
-      end
+      end   
     end
 
   end
