@@ -21,7 +21,7 @@ class Anagram
   end
 
   def is_a_word
-    if self =~ /[aeiouy]/i
+    if self.word =~ /[aeiouy]/i
       return true
     end
     raise NotAWordError, "You need to input actual words!"

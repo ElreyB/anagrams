@@ -78,7 +78,12 @@ describe 'Anagram' do
     describe '#is_a_word' do
       it 'will raise a NotAWordError' do
         not_word = Anagram.new("kkdjd")
-        expect{ not_word.word.is_a_word }.to raise_error
+        expect{ not_word.is_a_word }.to raise_error
+      end
+
+      it 'will return true' do
+        is_word = Anagram.new("bob")
+        expect(is_word.is_a_word).to eq true
       end
     end
 
