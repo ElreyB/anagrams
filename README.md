@@ -35,7 +35,7 @@ _Feel free to contact me at elbelmonti@gmail.com_
 Elrey_Belmonti ElreyB https://github.com/ElreyB code doc bug tests
 Contributors END -->
 <!-- Contributors table START -->
-| <img src="https://avatars.githubusercontent.com/ElreyB?s=100" width="100" alt="Elrey Belmonti" /><br /><sub>Elrey Belmonti</sub>](https://github.com/ElreyB)<br />[💻](https://github.com/ElreyB/anagrams/commits?author=ElreyB) [📖](https://github.com/ElreyB/anagrams/commits?author=ElreyB) [🐛](https://github.com/ElreyB/anagrams/issues?q=author%3AElreyB) [⚠️](https://github.com/ElreyB/anagrams/commits?author=ElreyB) |
+| <img src="https://avatars.githubusercontent.com/ElreyB?s=100" width="100" alt="Elrey Belmonti" /><br />[<sub>Elrey Belmonti</sub>](https://github.com/ElreyB)<br />[💻](https://github.com/ElreyB/anagrams/commits?author=ElreyB) [📖](https://github.com/ElreyB/anagrams/commits?author=ElreyB) [🐛](https://github.com/ElreyB/anagrams/issues?q=author%3AElreyB) [⚠️](https://github.com/ElreyB/anagrams/commits?author=ElreyB) |
 | :---: |
 <!-- Contributors table END -->
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification.
