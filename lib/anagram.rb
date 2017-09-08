@@ -18,11 +18,16 @@ class Anagram
       "These words are not anagrams"
   end
 
+  def both_palindromes?(possible_palindrome)
+    Palindrome.palindrome?(self) && Palindrome.palindrome(possible_palindrome)
+  end
+  
 private
   def alphabetically_sorted
     letters = @word.delete(" '?!:;.\"")
     letters.downcase.split("").sort.join
   end
+
 
 
 end
