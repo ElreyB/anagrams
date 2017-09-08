@@ -13,7 +13,7 @@ class Anagram
     if self.alphabetical_form == possible_anagram.alphabetical_form
       return "These words are anagrams."
     end
-      "These words are not anagrams"
+      "These words are not anagrams"   
   end
 
 private
