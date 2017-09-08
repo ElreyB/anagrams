@@ -18,7 +18,7 @@ class Anagram
 
 private
   def alphabetically_sorted
-    letters = @word.delete(" ")
+    letters = @word.delete(" '?!:;.")
     letters.downcase.split("").sort.join
   end
 

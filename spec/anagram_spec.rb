@@ -36,5 +36,18 @@ describe 'Anagram' do
       phrase2 = Anagram.new("Old West Action")
       expect(phrase1.anagram_of(phrase2)).to eq "These words are anagrams."
     end
+
+    it 'returns confirm phrase if alphabetical forms are equal when a phrase has qoutation marks' do
+      phrase1 = Anagram.new("Slot Machines")
+      phrase2 = Anagram.new("Cash lost in 'em")
+      expect(phrase1.anagram_of(phrase2)).to eq "These words are anagrams."
+    end
+
+    it 'returns confirm phrase if alphabetical forms are equal when a phrase has punctuations' do
+      phrase1 = Anagram.new("Heavy Rain?")
+      phrase2 = Anagram.new("Hire a navy!")
+      expect(phrase1.anagram_of(phrase2)).to eq "These words are anagrams."
+    end
+
   end
 end
