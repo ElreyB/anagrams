@@ -65,13 +65,13 @@ describe 'Anagram' do
       it 'returns true if both words are palindromes' do
         word1 = Anagram.new("tacocat")
         word2 = Anagram.new("bob")
-        expect(word1.word.both_palindromes?(word2.word)).to eq true
+        expect(Palindrome.both_palindromes?(word1.word, word2.word)).to eq "These words are palindromes."
       end
 
       it 'returns false if both words are not palindromes' do
         word1 = Anagram.new("tacocat")
         word2 = Anagram.new("ruby")
-        expect(word1.word.both_palindromes?(word2.word)).to eq false
+        expect(Palindrome.both_palindromes?(word1.word, word2.word)).to eq "These one or both of these words are not palindromes."
       end
     end
 
