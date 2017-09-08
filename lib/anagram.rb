@@ -2,6 +2,8 @@ require_relative 'palindrome'
 class Anagram
   include Palindrome
   attr_reader :word
+  class NotAWordError < StandardError
+  end
 
   def initialize(word)
     @word = word
@@ -18,7 +20,14 @@ class Anagram
       "These words are not anagrams"
   end
 
-  
+  def is_a_word
+    if self =~ /[aeiouy]/i
+      return true
+    end
+    raise NotAWordError, "You need to input actual words!"
+  end
+
+
 
 private
   def alphabetically_sorted
