@@ -49,5 +49,17 @@ describe 'Anagram' do
       expect(phrase1.anagram_of(phrase2)).to eq "These words are anagrams."
     end
 
+    describe 'Palindrome' do
+      it 'returns true' do
+        word1 = Anagram.new("tacocat")
+        expect(Palindrome.palindrome?(word1.word)).to eq true
+      end
+      
+      it 'returns false' do
+        word1 = Anagram.new("palindrom")
+        expect(Palindrome.palindrome?(word1.word)).to eq false
+      end
+    end
+
   end
 end
