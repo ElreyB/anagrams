@@ -28,12 +28,10 @@ class Anagram
   end
 
   def antigram(possible_antigram)
-    for i in 0..self.word.length
-      if self.word[i] != possible_antigram[i]
-        return "These words have no letter matches and are antigrams."
-      end
+    if antigram_helper(possible_antigram)
+      return "These words have no letter matches and are antigrams."
     end
-    false
+    antigram_helper(possible_antigram)
   end
 
 
@@ -46,6 +44,13 @@ class Anagram
 
   def anagram_helper(possible_anagram)
      self.alphabetical_form == possible_anagram.alphabetical_form
+  end
+
+  def antigram_helper(possible_antigram)
+    for i in 0..self.word.length
+      return self.word[i] != possible_antigram[i]
+    end
+    false
   end
 
 end
