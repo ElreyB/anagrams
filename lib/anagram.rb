@@ -14,7 +14,7 @@ class Anagram
   end
 
   def anagram_of(possible_anagram)
-    if self.alphabetical_form == possible_anagram.alphabetical_form
+    if self.anagram_helper(possible_anagram)
       return "These words are anagrams."
     end
       "These words are not anagrams"
@@ -36,12 +36,16 @@ class Anagram
     false
   end
 
-private
+
+
+# private
   def alphabetically_sorted
     letters = @word.delete(" '?!:;.\"")
     letters.downcase.split("").sort.join
   end
 
-
+  def anagram_helper(possible_anagram)
+     self.alphabetical_form == possible_anagram.alphabetical_form
+  end
 
 end
