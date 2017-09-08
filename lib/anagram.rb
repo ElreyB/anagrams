@@ -27,7 +27,14 @@ class Anagram
     raise NotAWordError, "You need to input actual words!"
   end
 
-
+  def antigram(possible_antigram)
+    for i in 0..self.word.length
+      if self.word[i] != possible_antigram[i]
+        return "These words have no letter matches and are antigrams."
+      end
+    end
+    false
+  end
 
 private
   def alphabetically_sorted

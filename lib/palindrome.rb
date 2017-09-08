@@ -13,7 +13,7 @@ module Palindrome
     if Palindrome.palindrome?(word1) && Palindrome.palindrome?(word2)
       return "These words are palindromes."
     end
-    "These one or both of these words are not palindromes."
+    "One or both of these words are not palindromes."
   end
 
 end

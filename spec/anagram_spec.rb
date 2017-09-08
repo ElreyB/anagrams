@@ -71,7 +71,7 @@ describe 'Anagram' do
       it 'returns false if both words are not palindromes' do
         word1 = Anagram.new("tacocat")
         word2 = Anagram.new("ruby")
-        expect(Palindrome.both_palindromes?(word1.word, word2.word)).to eq "These one or both of these words are not palindromes."
+        expect(Palindrome.both_palindromes?(word1.word, word2.word)).to eq "One or both of these words are not palindromes."
       end
     end
 
@@ -84,6 +84,18 @@ describe 'Anagram' do
       it 'will return true' do
         is_word = Anagram.new("bob")
         expect(is_word.is_a_word).to eq true
+      end
+    end
+
+    describe '#antigram' do
+      it 'returns false when word is an anagram' do
+        is_word = Anagram.new("bob")
+        expect(is_word.antigram("bob")).to eq false
+      end
+
+      it 'returns phrase when word is an antigram' do
+        is_word = Anagram.new("bob")
+        expect(is_word.antigram("kite")).to eq "These words have no letter matches and are antigrams."
       end
     end
 
