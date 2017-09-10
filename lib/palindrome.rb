@@ -9,11 +9,12 @@ module Palindrome
     false
   end
 
-  def self.both_palindromes?(word1, word2)
-    if Palindrome.palindrome?(word1) && Palindrome.palindrome?(word2)
-      return "These words are palindromes."
-    end
-    "One or both of these words are not palindromes."
-  end
+  # def self.both_palindromes?(word1, word2)
+  #   # if
+  #   Palindrome.palindrome?(word1) && Palindrome.palindrome?(word2)
+  #   #   return "These words are palindromes."
+  #   # end
+  #   # "One or both of these words are not palindromes."
+  # end
 
 end

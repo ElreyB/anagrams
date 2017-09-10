@@ -5,7 +5,7 @@ class Anagram
   include Palindrome
   include MyDictionary
   attr_reader :word
-  
+
   class NotAWordError < StandardError
   end
 
@@ -18,38 +18,43 @@ class Anagram
   end
 
   def anagram_of(possible_anagram)
-    if anagram_helper?(possible_anagram)
-      return "These words are anagrams."
-    end
-      "These words are not anagrams"
+    self.alphabetical_form == possible_anagram.alphabetical_form
+    # if anagram_helper?(possible_anagram)
+    #   return "These words are anagrams."
+    # end
+    #   "These words are not anagrams"
   end
 
   def is_a_word
-    if MyDictionary.exists?(self.word)
-      return true
-    end
-    raise NotAWordError, "You need to input actual words!"
+    MyDictionary.exists?(self.word)
+    #   return true
+    # end
+    # raise NotAWordError, "You need to input actual words!"
   end
 
   def antigram(possible_antigram)
-    if antigram_helper?(possible_antigram)
-      return "These words have no letter matches and are antigrams."
+    for i in 0..self.word.length
+      return self.word[i] != possible_antigram[i]
     end
-    antigram_helper?(possible_antigram)
+    false
+    # if antigram_helper?(possible_antigram)
+    #   return "These words have no letter matches and are antigrams."
+    # end
+    # antigram_helper?(possible_antigram)
   end
 
-  # def how_many_anagrams
-  #   anagram_count = 0
-  #   word_list = @word.split(" ")
-  #
-  #   if self.word =~ /[aeiouy]/i
-  #     return true
-  #   end
-  #   for i in 0..word_list.length-1
-  #     if word_lists
-  #     for x in 0..@word
-  #
-  # end
+  def how_many_anagrams(phrase)
+    anagram_count = 0
+    words = phrase.split(" ")
+    words.reduce(0) do |sum, word|
+      letters = word.delete(" '?!:;.\"")
+      if anagram_of(letters) && MyDictionary.exists?(letters)
+        anagram_count = sum + 1
+      end
+    end
+
+    anagram_count
+  end
 
 private
   def alphabetically_sorted
