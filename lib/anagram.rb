@@ -1,7 +1,11 @@
+require_relative 'my_dictionary'
 require_relative 'palindrome'
+
 class Anagram
   include Palindrome
+  include MyDictionary
   attr_reader :word
+  
   class NotAWordError < StandardError
   end
 
@@ -21,7 +25,7 @@ class Anagram
   end
 
   def is_a_word
-    if self.word =~ /[aeiouy]/i
+    if MyDictionary.exists?(self.word)
       return true
     end
     raise NotAWordError, "You need to input actual words!"

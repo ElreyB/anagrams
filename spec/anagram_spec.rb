@@ -99,12 +99,12 @@ describe 'Anagram' do
       end
     end
 
-    describe '#how_many_anagrams' do
-      it 'will give an account of how many anagrams and antigrams there are' do
-        phrase = Anagram.new("I took my shoe off and through it at my hoes")
-        expect(phrase.how_many_anagrams).to eq 1
-      end
-    end
+    # describe '#how_many_anagrams' do
+    #   it 'will give an account of how many anagrams and antigrams there are' do
+    #     phrase = Anagram.new("I took my shoe off and through it at my hoes")
+    #     expect(phrase.how_many_anagrams).to eq 1
+    #   end
+    # end
 
   end
 end
