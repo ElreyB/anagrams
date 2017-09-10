@@ -14,3 +14,9 @@ if first_word.anagram_of(second_word)
 else
   puts "These words are not anagrams"
 end
+
+if Palindrome.palindrome?(first_word.word) && Palindrome.palindrome?(second_word.word)
+  puts "These words are palindromes."
+else
+  puts "One or both of these words are not palindromes."
+end
