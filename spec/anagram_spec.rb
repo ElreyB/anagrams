@@ -26,8 +26,8 @@ describe 'Anagram' do
     end
 
     it 'returns true if alphabetical forms are equal with different cases' do
-      word2 = Anagram.new("Eat")
-      word3 = Anagram.new("Tea")
+      word2 = Anagram.new("hoes")
+      word3 = Anagram.new("shoe")
       expect(word2.anagram_of(word3)).to eq true
     end
 

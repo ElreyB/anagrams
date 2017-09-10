@@ -44,16 +44,14 @@ class Anagram
   end
 
   def how_many_anagrams(phrase)
-    anagram_count = 0
     words = phrase.split(" ")
     words.reduce(0) do |sum, word|
-      letters = word.delete(" '?!:;.\"")
-      if anagram_of(letters) && MyDictionary.exists?(letters)
-        anagram_count = sum + 1
+      letters = Anagram.new(word.delete(" '?!:;.\""))
+      if anagram_of(letters) && MyDictionary.exists?(letters.word)
+        sum += 1
       end
+      sum
     end
-
-    anagram_count
   end
 
 private
